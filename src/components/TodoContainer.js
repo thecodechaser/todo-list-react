@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoList from './TodoList';
+import Header from './Header';
 
 class TodoContainer extends React.Component {
   constructor() {
@@ -7,33 +8,47 @@ class TodoContainer extends React.Component {
     this.state = {
       todos: [
         {
-          id: 1,
+          id: 0,
           title: 'Meet The Doctor',
           completed: true,
         },
         {
-          id: 2,
+          id: 1,
           title: 'Complete the project',
           completed: false,
         },
         {
-          id: 3,
+          id: 2,
           title: 'Prepare your lunch',
           completed: false,
         },
         {
-          id: 4,
+          id: 3,
           title: 'Join stand-up meeting',
           completed: true,
         },
       ],
     };
   }
-
+  handleChange=(id)=>{
+      this.setState(prevState => ({
+          todos: prevState.todos.map(todo =>{
+              if(todo.id==id){
+                  return {
+                      ...todo, completed: !todo.completed
+                  }
+                  
+              }
+              return todo;
+          })
+      }));
+  }
   render() {
     return (
       <div>
-        <TodoList todos={this.state.todos} />
+        
+        <Header />
+        <TodoList todos={this.state.todos} handleChange={this.handleChange}/>
       </div>
     );
   }
