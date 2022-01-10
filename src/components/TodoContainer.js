@@ -53,7 +53,7 @@ class TodoContainer extends React.Component {
       <div>
         
         <Header />
-        <TodoList todos={this.state.todos} handleChange={this.handleChange}/>
+        <TodoList todos={this.state.todos} handleChange={this.handleChange} delTodo={this.delTodo}/>
       </div>
     );
   }
