@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
 class TodoItem extends React.Component {
-    constructor(props){
-        super(props)
-    }
+  constructor(props) {
+    super(props);
+  }
 
-    render(){
-        return (
-            <li>{this.props.todo.title}</li>
-        );
-    }
+  render() {
+    return (
+      <li>{this.props.todo.title}</li>
+    );
+  }
 }
 
 export default TodoItem;
