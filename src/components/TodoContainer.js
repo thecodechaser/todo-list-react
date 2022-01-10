@@ -30,6 +30,7 @@ class TodoContainer extends React.Component {
       ],
     };
   }
+
   handleChange=(id)=>{
       this.setState(prevState => ({
           todos: prevState.todos.map(todo =>{
@@ -42,6 +43,10 @@ class TodoContainer extends React.Component {
               return todo;
           })
       }));
+  }
+
+  delTodo = (id)=> {
+      console.log("deleted")
   }
   render() {
     return (
