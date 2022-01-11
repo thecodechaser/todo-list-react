@@ -1,4 +1,5 @@
 import React, { Component, useEffect, useState } from 'react';
+import { FaTrash } from 'react-icons/fa';
 
 const TodoItem =(props)=> {
   const [state, setState] = useState({
@@ -30,7 +31,7 @@ const TodoItem =(props)=> {
          <input type="checkbox" 
          checked={props.todo.completed}
          onChange={() => props.handleChange(props.todo.id)}/>
-         <button onClick={() => props.delTodo(props.todo.id)}>Delete</button>
+         <button onClick={() => props.delTodo(props.todo.id)}><FaTrash /></button>
          {props.todo.title}
          <div onDoubleClick={handleEditing} style={viewMode}>...</div>
          <input value={props.todo.title} type="text" style={editMode}
