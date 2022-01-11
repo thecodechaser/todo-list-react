@@ -3,6 +3,7 @@ import TodoList from './TodoList';
 import Header from './Header';
 import InputTodo from './InputTodo';
 import { v4 as uuidv4 } from 'uuid';
+import { Route, Routes } from 'react-router-dom';
 
 const TodoContainer =() =>{
   const [todos, setState] = useState([]);
@@ -55,11 +56,17 @@ const TodoContainer =() =>{
   }
    
     return (
+      <Routes>
+      <Route path="/"
+      element={
       <div>
         <Header />
         <InputTodo addTodoItem={addTodoItem}/>
         <TodoList todos={todos} handleChange={handleChange} delTodo={delTodo} setUpdate={setUpdate}/>
       </div>
+      }>
+      </Route>
+      </Routes>
     );
   
 }
