@@ -13,7 +13,13 @@ class TodoItem extends Component {
      editing: true
    })
   }
-
+  handleUpdateDone=(event)=>{
+    if(event.key == "Enter"){
+      this.setState({
+        editing: false
+      })
+    }
+  }
   render() {
     let viewMode = {};
     let editMode = {};
@@ -30,7 +36,9 @@ class TodoItem extends Component {
          <button onClick={() => this.props.delTodo(this.props.todo.id)}>Delete</button>
          {this.props.todo.title}
          <div onDoubleClick={this.handleEditing} style={viewMode}>...</div>
-         <input value={this.props.todo.title} type="text" style={editMode} onChange={e=> {this.props.setUpdate(e.target.value, this.props.todo.id)}}></input>
+         <input value={this.props.todo.title} type="text" style={editMode}
+          onChange={e=> {this.props.setUpdate(e.target.value, this.props.todo.id)}}
+          onKeyDown={this.handleUpdateDone}></input>
           </li>
     );
   }
