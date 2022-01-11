@@ -23,6 +23,14 @@
     color: #4895ef;
 }
 
+/* main-cotainer-style */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 
 
