@@ -84,6 +84,10 @@
     font-size: 17px;
 }
 
+.title {
+    margin: 0;
+}
+
 .edit-item {
     margin-left: 90px;
     color: #4895ef;

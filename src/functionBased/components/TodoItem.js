@@ -26,6 +26,12 @@ const TodoItem =(props)=> {
       editMode.display = "none";
     }
 
+    const completedStyle = {
+      fontStyle: "italic",
+      opacity: 0.4,
+      textDecoration: "line-through",
+    }
+
     return (
       <>
       <li className="todo-item">
@@ -33,8 +39,7 @@ const TodoItem =(props)=> {
          checked={props.todo.completed}
          onChange={() => props.handleChange(props.todo.id)} className="checkBox"/>
          <button onClick={() => props.delTodo(props.todo.id)} className="trash-btn"><FaTrash className="trash-icon"/></button>
-         {props.todo.title}
-         
+         <span className="title" style={props.todo.completed ? completedStyle : null}>{props.todo.title}</span>
          <input value={props.todo.title} type="text" style={editMode}
           onChange={e=> {props.setUpdate(e.target.value, props.todo.id)}}
           onKeyDown={handleUpdateDone}></input>
