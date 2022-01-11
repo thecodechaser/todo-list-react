@@ -31,6 +31,19 @@
     align-items: center;
 }
 
+/* input-todo-style */
+
+.form {
+    display: flex;
+    gap: 10px;
+}
+
+.add-todo {
+    padding: 10px;
+    width: 400px;
+    border-radius: 5px;
+}
+
 /* todo-list-style */
 
 .todo-items {
@@ -42,6 +55,10 @@
 .todo-item {
     display: flex;
     gap: 20px;
+}
+
+.edit-item {
+    margin-left: 90px;
 }
 
 

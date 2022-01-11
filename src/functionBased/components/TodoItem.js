@@ -27,17 +27,20 @@ const TodoItem =(props)=> {
     }
 
     return (
+      <>
       <li className="todo-item">
          <input type="checkbox" 
          checked={props.todo.completed}
          onChange={() => props.handleChange(props.todo.id)}/>
          <button onClick={() => props.delTodo(props.todo.id)}><FaTrash /></button>
          {props.todo.title}
-         <div onDoubleClick={handleEditing} style={viewMode}>...</div>
+         
          <input value={props.todo.title} type="text" style={editMode}
           onChange={e=> {props.setUpdate(e.target.value, props.todo.id)}}
           onKeyDown={handleUpdateDone}></input>
           </li>
+          <div onDoubleClick={handleEditing} style={viewMode} className="edit-item">...</div>
+          </>
     );
 }
 
