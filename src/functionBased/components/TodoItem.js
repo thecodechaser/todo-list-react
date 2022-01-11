@@ -27,7 +27,7 @@ const TodoItem =(props)=> {
     }
 
     return (
-      <li>
+      <li className="todo-item">
          <input type="checkbox" 
          checked={props.todo.completed}
          onChange={() => props.handleChange(props.todo.id)}/>

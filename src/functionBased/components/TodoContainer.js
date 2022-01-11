@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import About from '../../pages/About';
 import NotMatch from '../../pages/NotMatch';
 import Navbar from './Navbar';
+import '../../style.css';
 
 const TodoContainer =() =>{
   const [todos, setState] = useState([]);
@@ -64,7 +65,7 @@ const TodoContainer =() =>{
       <Routes>
       <Route path="/"
       element={
-      <div>
+      <div className="main-container">
         <Header />
         <InputTodo addTodoItem={addTodoItem}/>
         <TodoList todos={todos} handleChange={handleChange} delTodo={delTodo} setUpdate={setUpdate}/>
