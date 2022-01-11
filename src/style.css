@@ -31,6 +31,17 @@
     align-items: center;
 }
 
+/* todo-list-style */
 
+.todo-items {
+    list-style-type: none;
+}
+
+/* todo-item-style */
+
+.todo-item {
+    display: flex;
+    gap: 20px;
+}
 
 
