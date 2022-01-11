@@ -43,6 +43,17 @@
     padding: 10px;
     width: 400px;
     border-radius: 5px;
+    border: 1px solid #4895ef;
+    outline: none;
+}
+
+.add-btn {
+    border: 1px solid #4895ef;
+    background: none;
+}
+
+.add-icon {
+    font-size: 17px;
 }
 
 /* todo-list-style */
@@ -57,14 +68,27 @@
     display: flex;
     gap: 20px;
     font-size: 18px;
+    color: #4895ef;
 }
 
 .checkBox {
     transform : scale(1.5);
 }
 
+.trash-btn {
+    border: 1px solid #4895ef;
+    background: none;
+}
+
+.trash-icon {
+    font-size: 17px;
+}
+
 .edit-item {
     margin-left: 90px;
+    color: #4895ef;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 

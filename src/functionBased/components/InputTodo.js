@@ -27,7 +27,7 @@ const InputTodo = (props) => {
         return (
         <form onSubmit={handleSubmit} className="form">
             <input type="text" placeholder="Add todo..." value={inputTitle.title} onChange={onChange} name="title" className="add-todo"/>
-            <button><FaPlusCircle /></button>
+            <button className="add-btn"><FaPlusCircle className="add-icon"/></button>
         </form>
         );
 }
