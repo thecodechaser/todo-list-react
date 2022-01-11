@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { Route, Routes } from 'react-router-dom';
 import About from '../../pages/About';
 import NotMatch from '../../pages/NotMatch';
+import Navbar from './Navbar';
 
 const TodoContainer =() =>{
   const [todos, setState] = useState([]);
@@ -58,6 +59,8 @@ const TodoContainer =() =>{
   }
    
     return (
+      <>
+      <Navbar />
       <Routes>
       <Route path="/"
       element={
@@ -71,6 +74,7 @@ const TodoContainer =() =>{
       <Route path="/about" element={<About />}/>
       <Route path="*" element={<NotMatch />}/>
       </Routes>
+      </>
     );
   
 }
