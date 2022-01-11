@@ -36,6 +36,7 @@
 .form {
     display: flex;
     gap: 10px;
+    margin-right: 40px;
 }
 
 .add-todo {
@@ -55,6 +56,11 @@
 .todo-item {
     display: flex;
     gap: 20px;
+    font-size: 18px;
+}
+
+.checkBox {
+    transform : scale(1.5);
 }
 
 .edit-item {

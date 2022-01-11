@@ -31,7 +31,7 @@ const TodoItem =(props)=> {
       <li className="todo-item">
          <input type="checkbox" 
          checked={props.todo.completed}
-         onChange={() => props.handleChange(props.todo.id)}/>
+         onChange={() => props.handleChange(props.todo.id)} className="checkBox"/>
          <button onClick={() => props.delTodo(props.todo.id)}><FaTrash /></button>
          {props.todo.title}
          
