@@ -45,8 +45,7 @@ class TodoContainer extends React.Component {
               return todo;
           })
       }));
-  }
-
+  } 
   delTodo = (id)=> {
      this.setState({
          todos: [
@@ -54,13 +53,9 @@ class TodoContainer extends React.Component {
                  return todo.id != id;
              })
          ]
-     }
-
-     )
+     })
   }
-
   addTodoItem=(title)=>{
-    //   const id=this.state.todos.length;
       const newTodo = {
           id: uuidv4(),
           title: title,
@@ -70,12 +65,22 @@ class TodoContainer extends React.Component {
           todos: [...this.state.todos, newTodo]
       })
   }
+  setUpdate =(title, id)=>{
+    this.setState({
+      todos: this.state.todos.map(todo => {
+        if(todo.id == id){
+          todo.title = title
+        }
+        return todo;
+      })
+    })
+  }
   render() {
     return (
       <div>
         <Header />
         <InputTodo addTodoItem={this.addTodoItem}/>
-        <TodoList todos={this.state.todos} handleChange={this.handleChange} delTodo={this.delTodo}/>
+        <TodoList todos={this.state.todos} handleChange={this.handleChange} delTodo={this.delTodo} setUpdate={this.setUpdate}/>
       </div>
     );
   }
