@@ -25,12 +25,6 @@ const TodoItem =(props)=> {
       editMode.display = "none";
     }
 
-    useEffect(()=>{
-      return () => {
-        console.log("hello")
-      }
-    }, [])
-    
     return (
       <li>
          <input type="checkbox" 

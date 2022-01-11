@@ -8,14 +8,16 @@ const TodoContainer =() =>{
   const [todos, setState] = useState([]);
 
   useEffect(() => {
-    console.log("hello")
-    fetch("https://jsonplaceholder.typicode.com/todos?_limit=10")
+    if(todos){
+      fetch("https://jsonplaceholder.typicode.com/todos?_limit=10")
       .then(response => response.json())
       .then(data => setState(data))
-  }, [setState])
+    }
+    
+  },[])
   const handleChange=(id)=>{
-      setState(prevState => ({
-          todos: prevState.map(todo =>{
+      setState(prevState =>
+          prevState.map(todo =>{
               if(todo.id==id){
                   return {
                       ...todo, completed: !todo.completed
@@ -24,16 +26,14 @@ const TodoContainer =() =>{
               }
               return todo;
           })
-      }));
+      );
   } 
   const delTodo = (id)=> {
-     setState({
-         todos: [
+     setState([
              ...todos.filter(todo =>{
                  return todo.id != id;
-             })
-         ]
-     })
+             }),
+         ])
   }
  const addTodoItem=(title)=>{
       const newTodo = {
@@ -41,19 +41,17 @@ const TodoContainer =() =>{
           title: title,
           completed: false
       };
-      setState({
-          todos: [...todos, newTodo]
-      })
+      setState([...todos, newTodo])
   }
  const setUpdate =(title, id)=>{
-    setState({
-      todos: todos.map(todo => {
+    setState(
+      todos.map(todo => {
         if(todo.id == id){
           todo.title = title
         }
         return todo;
       })
-    })
+    )
   }
    
     return (
