@@ -7,7 +7,7 @@ import TodoContainer from './functionBased/components/TodoContainer';
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-    <TodoContainer />
+      <TodoContainer />
     </Router>
   </React.StrictMode>, document.getElementById('root'),
 );

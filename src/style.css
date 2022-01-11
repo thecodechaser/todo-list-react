@@ -1,98 +1,96 @@
 /* navbar-style */
 
 .nav-menu {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 100px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
 }
 
 .nav-item {
-    text-decoration: none;
-    font-size: 20px;
-    color: #4895ef;
+  text-decoration: none;
+  font-size: 20px;
+  color: #4895ef;
 }
 
 .nav-item:hover {
-    color: #e07a5f;
+  color: #e07a5f;
 }
 
 /* header-style */
 
 .header-heading {
-    color: #4895ef;
+  color: #4895ef;
 }
 
 /* main-cotainer-style */
 
 .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* input-todo-style */
 
 .form {
-    display: flex;
-    gap: 10px;
-    margin-right: 40px;
+  display: flex;
+  gap: 10px;
+  margin-right: 40px;
 }
 
 .add-todo {
-    padding: 10px;
-    width: 400px;
-    border-radius: 5px;
-    border: 1px solid #4895ef;
-    outline: none;
+  padding: 10px;
+  width: 400px;
+  border-radius: 5px;
+  border: 1px solid #4895ef;
+  outline: none;
 }
 
 .add-btn {
-    border: 1px solid #4895ef;
-    background: none;
+  border: 1px solid #4895ef;
+  background: none;
 }
 
 .add-icon {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 /* todo-list-style */
 
 .todo-items {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 /* todo-item-style */
 
 .todo-item {
-    display: flex;
-    gap: 20px;
-    font-size: 18px;
-    color: #4895ef;
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  color: #4895ef;
 }
 
 .checkBox {
-    transform : scale(1.5);
+  transform: scale(1.5);
 }
 
 .trash-btn {
-    border: 1px solid #4895ef;
-    background: none;
+  border: 1px solid #4895ef;
+  background: none;
 }
 
 .trash-icon {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 .title {
-    margin: 0;
+  margin: 0;
 }
 
 .edit-item {
-    margin-left: 90px;
-    color: #4895ef;
-    font-size: 17px;
-    font-weight: bold;
+  margin-left: 90px;
+  color: #4895ef;
+  font-size: 17px;
+  font-weight: bold;
 }
-
-
