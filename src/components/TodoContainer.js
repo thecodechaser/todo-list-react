@@ -8,31 +8,15 @@ class TodoContainer extends React.Component {
   constructor() {
     super();
     this.state = {
-      todos: [
-        {
-          id: uuidv4(),
-          title: 'Meet The Doctor',
-          completed: true,
-        },
-        {
-          id: uuidv4(),
-          title: 'Complete the project',
-          completed: false,
-        },
-        {
-          id: uuidv4(),
-          title: 'Prepare your lunch',
-          completed: false,
-        },
-        {
-          id: uuidv4(),
-          title: 'Join stand-up meeting',
-          completed: true,
-        },
-      ],
+      todos: []
     };
   }
 
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/todos?_limit=10")
+    .then(response => response.json())
+    .then(data => this.setState({todos: data}))
+  }
   handleChange=(id)=>{
       this.setState(prevState => ({
           todos: prevState.todos.map(todo =>{
