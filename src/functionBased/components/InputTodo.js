@@ -21,8 +21,6 @@ const InputTodo = (props) => {
       setTitle({
         title: '',
       });
-    } else {
-      alert('Please write item');
     }
   };
   return (
