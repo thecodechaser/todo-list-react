@@ -20,7 +20,7 @@ Project's features are added into seperate branch to keep main branch safe.
 
 ## Online live link
 
-[Visit project online](https://thecodechaser.github.io/todo-list-react/)
+[Visit project online](https://todo-list-thecodechaser.netlify.app/)
 
 ## Getting Started
 
